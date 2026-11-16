@@ -7,8 +7,6 @@ javac -encoding UTF-8 -d out src/*.java
 java -cp out Main            # modo interactivo (manual o automático)
 ./ejecutar_corridas.sh       # regenera EJECUCION.txt (4 corridas)
 ```
-Requiere JDK 17 o superior. En Windows, si ves caracteres raros: `chcp 65001`.
-
 ## Flujo de un turno (sección 8 del enunciado)
 1. El jugador elige acción: **atacar, defender o usar ítem** (poción) → `ControladorConsola` devuelve un objeto `Accion` (**Command**).
 2. `MotorCombate` ejecuta la acción; en un ataque invoca `heroe.atacar(enemigo)`.
