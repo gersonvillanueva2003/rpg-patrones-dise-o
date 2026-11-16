@@ -1,0 +1,376 @@
+################################################################
+# CORRIDA 1: Mago + Espada, Veneno, Bendición vs Goblin (modo automático)
+################################################################
+Nombre: Aria
+Clase (1=Guerrero, 2=Mago, 3=Arquero, 4=Pícaro): 2
+Equipamiento separado por comas (1=Espada, 2=Armadura, 3=Veneno, 4=Amuleto, 5=Bendición, 0=nada): 1,3,5
+Enemigo (1=Goblin, 2=Orco, 3=Dragón): 1
+Modo de combate (1=Manual, 2=Automático): 2
+
+Héroe: Aria (base) + Espada + Veneno + Bendición
+ATK: 40 | DEF: 12 | VEL: 17 | HP: 100
+Enemigo: Goblin salvaje | ATK: 13 | DEF: 5 | HP: 60
+Pociones del héroe: 2 (curan 30 HP)
+
+COMBATE INICIADO
+
+TURNO 1
+Aria (base) + Espada + Veneno + Bendición usa AtaqueHechizo sobre Goblin salvaje
+  Daño: 40 | Efecto: hechizo + veneno
+  Goblin salvaje HP: 60 -> 20
+  Goblin salvaje queda envenenado (3 de daño x 2 turnos)
+  [Veneno] Goblin salvaje sufre 3 de daño: 20 -> 17
+Goblin salvaje (base) usa AtaquePunalada sobre Aria
+  Daño: 1 | Efecto: puñalada
+  Aria HP: 100 -> 99
+  [ESTADO] Aria [##########] 99/100 | pociones: 2
+           Goblin salvaje [###-------] 17/60 (envenenado)
+
+TURNO 2
+Aria (base) + Espada + Veneno + Bendición usa AtaqueHechizo sobre Goblin salvaje
+  Daño: 40 | Efecto: hechizo + veneno
+  Goblin salvaje HP: 17 -> 0
+  [ESTADO] Aria [##########] 99/100 | pociones: 2
+           Goblin salvaje [----------] 0/60 (envenenado)
+
+COMBATE FINALIZADO
+Ganador: Aria (base) + Espada + Veneno + Bendición (HP restante: 99)
+
+BITÁCORA DE COMBATE
+  - Inicia el combate: Aria vs Goblin salvaje
+  - T1 Aria ataca a Goblin salvaje con AtaqueHechizo: 40 de daño (60 -> 20)
+  - T1 Goblin salvaje queda envenenado (3 de daño x 2 turnos)
+  - T1 [Veneno] Goblin salvaje sufre 3 de daño: 20 -> 17
+  - T1 Goblin salvaje ataca a Aria con AtaquePunalada: 1 de daño (100 -> 99)
+  - T2 Aria ataca a Goblin salvaje con AtaqueHechizo: 40 de daño (17 -> 0)
+  - Ganador: Aria (base) + Espada + Veneno + Bendición (HP restante: 99) [VICTORIA]
+    Estadísticas finales: turnos=2, daño del héroe=83, daño del enemigo=1, críticos=0, pociones usadas=0
+
+
+################################################################
+# CORRIDA 2: Mago + Bendición, Amuleto vs Orco (modo MANUAL: ataca/defiende/poción)
+################################################################
+Nombre: Merlin
+Clase (1=Guerrero, 2=Mago, 3=Arquero, 4=Pícaro): 2
+Equipamiento separado por comas (1=Espada, 2=Armadura, 3=Veneno, 4=Amuleto, 5=Bendición, 0=nada): 5,4
+Enemigo (1=Goblin, 2=Orco, 3=Dragón): 2
+Modo de combate (1=Manual, 2=Automático): 1
+
+Héroe: Merlin (base) + Bendición + Amuleto
+ATK: 23 | DEF: 15 | VEL: 17 | HP: 100
+Enemigo: Orco brutal | ATK: 18 | DEF: 9 | HP: 90
+Pociones del héroe: 2 (curan 30 HP)
+
+COMBATE INICIADO
+
+TURNO 1
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (2 restantes)
+  > 1
+Merlin (base) + Bendición + Amuleto usa AtaqueHechizo sobre Orco brutal
+  Daño: 23 | Efecto: hechizo
+  Orco brutal HP: 90 -> 67
+Orco brutal (base) usa AtaqueEspada sobre Merlin
+  Daño: 3 | Efecto: espadazo
+  Merlin HP: 100 -> 97
+  [ESTADO] Merlin [##########] 97/100 | pociones: 2
+           Orco brutal [#######---] 67/90
+
+TURNO 2
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (2 restantes)
+  > 2
+  Merlin se defiende: recibirá la mitad del daño hasta su próximo turno
+  Amuleto regenera 2 HP (97 -> 99)
+Orco brutal (base) usa AtaqueEspada sobre Merlin
+  Daño: 3 | Efecto: espadazo
+  [Defensa] Merlin resiste 2 -> daño aplicado: 1
+  Merlin HP: 99 -> 98
+  [ESTADO] Merlin [##########] 98/100 (defendiendo) | pociones: 2
+           Orco brutal [#######---] 67/90
+
+TURNO 3
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (2 restantes)
+  > 1
+Merlin (base) + Bendición + Amuleto usa AtaqueHechizo sobre Orco brutal
+  Daño: 23 | Efecto: hechizo
+  Orco brutal HP: 67 -> 44
+  Amuleto regenera 2 HP (98 -> 100)
+Orco brutal (base) usa AtaqueEspada sobre Merlin
+  Daño: 3 | Efecto: espadazo
+  Merlin HP: 100 -> 97
+  [ESTADO] Merlin [##########] 97/100 | pociones: 2
+           Orco brutal [#####-----] 44/90
+
+TURNO 4
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (2 restantes)
+  > 1
+Merlin (base) + Bendición + Amuleto usa AtaqueHechizo sobre Orco brutal
+  Daño: 23 | Efecto: hechizo
+  Orco brutal HP: 44 -> 21
+  Amuleto regenera 2 HP (97 -> 99)
+Orco brutal (base) usa AtaqueEspada sobre Merlin
+  Daño: 3 | Efecto: espadazo
+  Merlin HP: 99 -> 96
+  [ESTADO] Merlin [##########] 96/100 | pociones: 2
+           Orco brutal [##--------] 21/90
+
+TURNO 5
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (2 restantes)
+  > 3
+  Merlin bebe una poción (96 -> 100 HP, quedan 1)
+Orco brutal (base) usa AtaqueEspada sobre Merlin
+  Daño: 3 | Efecto: espadazo
+  Merlin HP: 100 -> 97
+  [ESTADO] Merlin [##########] 97/100 | pociones: 1
+           Orco brutal [##--------] 21/90
+
+TURNO 6
+  Acción de Merlin: 1) Atacar  2) Defender  3) Usar poción (1 restantes)
+  > 1
+Merlin (base) + Bendición + Amuleto usa AtaqueHechizo sobre Orco brutal
+  Daño: 35 (¡CRÍTICO!) | Efecto: hechizo
+  Orco brutal HP: 21 -> 0
+  Amuleto regenera 2 HP (97 -> 99)
+  [ESTADO] Merlin [##########] 99/100 | pociones: 1
+           Orco brutal [----------] 0/90
+
+COMBATE FINALIZADO
+Ganador: Merlin (base) + Bendición + Amuleto (HP restante: 99)
+
+BITÁCORA DE COMBATE
+  - Inicia el combate: Merlin vs Orco brutal
+  - T1 Merlin ataca a Orco brutal con AtaqueHechizo: 23 de daño (90 -> 67)
+  - T1 Orco brutal ataca a Merlin con AtaqueEspada: 3 de daño (100 -> 97)
+  - T2 Merlin se defiende: recibirá la mitad del daño hasta su próximo turno
+  - T2 Amuleto regenera 2 HP (97 -> 99)
+  - T2 Orco brutal ataca a Merlin con AtaqueEspada: 1 de daño (99 -> 98) [RESISTENCIA: la defensa absorbió 2]
+  - T3 Merlin ataca a Orco brutal con AtaqueHechizo: 23 de daño (67 -> 44)
+  - T3 Amuleto regenera 2 HP (98 -> 100)
+  - T3 Orco brutal ataca a Merlin con AtaqueEspada: 3 de daño (100 -> 97)
+  - T4 Merlin ataca a Orco brutal con AtaqueHechizo: 23 de daño (44 -> 21)
+  - T4 Amuleto regenera 2 HP (97 -> 99)
+  - T4 Orco brutal ataca a Merlin con AtaqueEspada: 3 de daño (99 -> 96)
+  - T5 Merlin bebe una poción (96 -> 100 HP, quedan 1)
+  - T5 Orco brutal ataca a Merlin con AtaqueEspada: 3 de daño (100 -> 97)
+  - T6 Merlin ataca a Orco brutal con AtaqueHechizo: 35 de daño (21 -> 0) [¡CRÍTICO!]
+  - T6 Amuleto regenera 2 HP (97 -> 99)
+  - Ganador: Merlin (base) + Bendición + Amuleto (HP restante: 99) [VICTORIA]
+    Estadísticas finales: turnos=6, daño del héroe=104, daño del enemigo=13, críticos=1, pociones usadas=1
+
+
+################################################################
+# CORRIDA 3: Pícaro + Espada, Veneno, Armadura vs Orco (automático)
+################################################################
+Nombre: Shade
+Clase (1=Guerrero, 2=Mago, 3=Arquero, 4=Pícaro): 4
+Equipamiento separado por comas (1=Espada, 2=Armadura, 3=Veneno, 4=Amuleto, 5=Bendición, 0=nada): 1,3,2
+Enemigo (1=Goblin, 2=Orco, 3=Dragón): 2
+Modo de combate (1=Manual, 2=Automático): 2
+
+Héroe: Shade (base) + Espada + Veneno + Armadura
+ATK: 31 | DEF: 15 | VEL: 20 | HP: 85
+Enemigo: Orco brutal | ATK: 18 | DEF: 9 | HP: 90
+Pociones del héroe: 2 (curan 30 HP)
+
+COMBATE INICIADO
+
+TURNO 1
+Shade (base) + Espada + Veneno + Armadura usa AtaquePunalada sobre Orco brutal
+  Daño: 22 | Efecto: puñalada + veneno
+  Orco brutal HP: 90 -> 68
+  Orco brutal queda envenenado (3 de daño x 2 turnos)
+  [Veneno] Orco brutal sufre 3 de daño: 68 -> 65
+Orco brutal (base) usa AtaqueEspada sobre Shade
+  Daño: 3 | Efecto: espadazo
+  Shade HP: 85 -> 82
+  [ESTADO] Shade [##########] 82/85 | pociones: 2
+           Orco brutal [#######---] 65/90 (envenenado)
+
+TURNO 2
+Shade (base) + Espada + Veneno + Armadura usa AtaquePunalada sobre Orco brutal
+  Daño: 22 | Efecto: puñalada + veneno
+  Orco brutal HP: 65 -> 43
+  Orco brutal queda envenenado (3 de daño x 2 turnos)
+  [Veneno] Orco brutal sufre 3 de daño: 43 -> 40
+Orco brutal (base) usa AtaqueEspada sobre Shade
+  Daño: 3 | Efecto: espadazo
+  Shade HP: 82 -> 79
+  [ESTADO] Shade [#########-] 79/85 | pociones: 2
+           Orco brutal [####------] 40/90 (envenenado)
+
+TURNO 3
+Shade (base) + Espada + Veneno + Armadura usa AtaquePunalada sobre Orco brutal
+  Daño: 22 | Efecto: puñalada + veneno
+  Orco brutal HP: 40 -> 18
+  Orco brutal queda envenenado (3 de daño x 2 turnos)
+  [Veneno] Orco brutal sufre 3 de daño: 18 -> 15
+Orco brutal (base) usa AtaqueEspada sobre Shade
+  Daño: 3 | Efecto: espadazo
+  Shade HP: 79 -> 76
+  [ESTADO] Shade [#########-] 76/85 | pociones: 2
+           Orco brutal [##--------] 15/90 (envenenado)
+
+TURNO 4
+Shade (base) + Espada + Veneno + Armadura usa AtaquePunalada sobre Orco brutal
+  Daño: 22 | Efecto: puñalada + veneno
+  Orco brutal HP: 15 -> 0
+  [ESTADO] Shade [#########-] 76/85 | pociones: 2
+           Orco brutal [----------] 0/90 (envenenado)
+
+COMBATE FINALIZADO
+Ganador: Shade (base) + Espada + Veneno + Armadura (HP restante: 76)
+
+BITÁCORA DE COMBATE
+  - Inicia el combate: Shade vs Orco brutal
+  - T1 Shade ataca a Orco brutal con AtaquePunalada: 22 de daño (90 -> 68)
+  - T1 Orco brutal queda envenenado (3 de daño x 2 turnos)
+  - T1 [Veneno] Orco brutal sufre 3 de daño: 68 -> 65
+  - T1 Orco brutal ataca a Shade con AtaqueEspada: 3 de daño (85 -> 82)
+  - T2 Shade ataca a Orco brutal con AtaquePunalada: 22 de daño (65 -> 43)
+  - T2 Orco brutal queda envenenado (3 de daño x 2 turnos)
+  - T2 [Veneno] Orco brutal sufre 3 de daño: 43 -> 40
+  - T2 Orco brutal ataca a Shade con AtaqueEspada: 3 de daño (82 -> 79)
+  - T3 Shade ataca a Orco brutal con AtaquePunalada: 22 de daño (40 -> 18)
+  - T3 Orco brutal queda envenenado (3 de daño x 2 turnos)
+  - T3 [Veneno] Orco brutal sufre 3 de daño: 18 -> 15
+  - T3 Orco brutal ataca a Shade con AtaqueEspada: 3 de daño (79 -> 76)
+  - T4 Shade ataca a Orco brutal con AtaquePunalada: 22 de daño (15 -> 0)
+  - Ganador: Shade (base) + Espada + Veneno + Armadura (HP restante: 76) [VICTORIA]
+    Estadísticas finales: turnos=4, daño del héroe=97, daño del enemigo=9, críticos=0, pociones usadas=0
+
+
+################################################################
+# CORRIDA 4: Arquero + Bendición, Veneno, Amuleto vs Dragón (automático, derrota)
+################################################################
+Nombre: Lyra
+Clase (1=Guerrero, 2=Mago, 3=Arquero, 4=Pícaro): 3
+Equipamiento separado por comas (1=Espada, 2=Armadura, 3=Veneno, 4=Amuleto, 5=Bendición, 0=nada): 5,3,4
+Enemigo (1=Goblin, 2=Orco, 3=Dragón): 3
+Modo de combate (1=Manual, 2=Automático): 2
+
+Héroe: Lyra (base) + Bendición + Veneno + Amuleto
+ATK: 25 | DEF: 12 | VEL: 21 | HP: 90
+Enemigo: Dragón ancestral | ATK: 26 | DEF: 15 | HP: 150
+Pociones del héroe: 2 (curan 30 HP)
+
+COMBATE INICIADO
+
+TURNO 1
+Lyra (base) + Bendición + Veneno + Amuleto usa AtaqueFlecha sobre Dragón ancestral
+  Daño: 18 | Efecto: flechazo + veneno
+  Dragón ancestral HP: 150 -> 132
+  Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  [Veneno] Dragón ancestral sufre 3 de daño: 132 -> 129
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 90 -> 64
+  [ESTADO] Lyra [#######---] 64/90 | pociones: 2
+           Dragón ancestral [#########-] 129/150 (envenenado)
+
+TURNO 2
+Lyra (base) + Bendición + Veneno + Amuleto usa AtaqueFlecha sobre Dragón ancestral
+  Daño: 18 | Efecto: flechazo + veneno
+  Dragón ancestral HP: 129 -> 111
+  Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  Amuleto regenera 2 HP (64 -> 66)
+  [Veneno] Dragón ancestral sufre 3 de daño: 111 -> 108
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 66 -> 40
+  [ESTADO] Lyra [####------] 40/90 | pociones: 2
+           Dragón ancestral [#######---] 108/150 (envenenado)
+
+TURNO 3
+Lyra (base) + Bendición + Veneno + Amuleto usa AtaqueFlecha sobre Dragón ancestral
+  Daño: 18 | Efecto: flechazo + veneno
+  Dragón ancestral HP: 108 -> 90
+  Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  Amuleto regenera 2 HP (40 -> 42)
+  [Veneno] Dragón ancestral sufre 3 de daño: 90 -> 87
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 42 -> 16
+  [ESTADO] Lyra [##--------] 16/90 | pociones: 2
+           Dragón ancestral [######----] 87/150 (envenenado)
+
+TURNO 4
+  Lyra bebe una poción (16 -> 46 HP, quedan 1)
+  Amuleto regenera 2 HP (46 -> 48)
+  [Veneno] Dragón ancestral sufre 3 de daño: 87 -> 84
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 48 -> 22
+  [ESTADO] Lyra [##--------] 22/90 | pociones: 1
+           Dragón ancestral [######----] 84/150
+
+TURNO 5
+  Lyra bebe una poción (22 -> 52 HP, quedan 0)
+  Amuleto regenera 2 HP (52 -> 54)
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 54 -> 28
+  [ESTADO] Lyra [###-------] 28/90
+           Dragón ancestral [######----] 84/150
+
+TURNO 6
+Lyra (base) + Bendición + Veneno + Amuleto usa AtaqueFlecha sobre Dragón ancestral
+  Daño: 18 | Efecto: flechazo + veneno
+  Dragón ancestral HP: 84 -> 66
+  Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  Amuleto regenera 2 HP (28 -> 30)
+  [Veneno] Dragón ancestral sufre 3 de daño: 66 -> 63
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  Lyra HP: 30 -> 4
+  [ESTADO] Lyra [----------] 4/90
+           Dragón ancestral [####------] 63/150 (envenenado)
+
+TURNO 7
+  Lyra se defiende: recibirá la mitad del daño hasta su próximo turno
+  Amuleto regenera 2 HP (4 -> 6)
+  [Veneno] Dragón ancestral sufre 3 de daño: 63 -> 60
+Dragón ancestral (base) usa AtaqueHechizo sobre Lyra
+  Daño: 26 | Efecto: hechizo
+  [Defensa] Lyra resiste 13 -> daño aplicado: 13
+  Lyra HP: 6 -> 0
+  [ESTADO] Lyra [----------] 0/90 (defendiendo)
+           Dragón ancestral [####------] 60/150
+
+COMBATE FINALIZADO
+Ganador: Dragón ancestral (HP restante: 60)
+
+BITÁCORA DE COMBATE
+  - Inicia el combate: Lyra vs Dragón ancestral
+  - T1 Lyra ataca a Dragón ancestral con AtaqueFlecha: 18 de daño (150 -> 132)
+  - T1 Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  - T1 [Veneno] Dragón ancestral sufre 3 de daño: 132 -> 129
+  - T1 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (90 -> 64)
+  - T2 Lyra ataca a Dragón ancestral con AtaqueFlecha: 18 de daño (129 -> 111)
+  - T2 Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  - T2 Amuleto regenera 2 HP (64 -> 66)
+  - T2 [Veneno] Dragón ancestral sufre 3 de daño: 111 -> 108
+  - T2 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (66 -> 40)
+  - T3 Lyra ataca a Dragón ancestral con AtaqueFlecha: 18 de daño (108 -> 90)
+  - T3 Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  - T3 Amuleto regenera 2 HP (40 -> 42)
+  - T3 [Veneno] Dragón ancestral sufre 3 de daño: 90 -> 87
+  - T3 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (42 -> 16)
+  - T4 Lyra bebe una poción (16 -> 46 HP, quedan 1)
+  - T4 Amuleto regenera 2 HP (46 -> 48)
+  - T4 [Veneno] Dragón ancestral sufre 3 de daño: 87 -> 84
+  - T4 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (48 -> 22)
+  - T5 Lyra bebe una poción (22 -> 52 HP, quedan 0)
+  - T5 Amuleto regenera 2 HP (52 -> 54)
+  - T5 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (54 -> 28)
+  - T6 Lyra ataca a Dragón ancestral con AtaqueFlecha: 18 de daño (84 -> 66)
+  - T6 Dragón ancestral queda envenenado (3 de daño x 2 turnos)
+  - T6 Amuleto regenera 2 HP (28 -> 30)
+  - T6 [Veneno] Dragón ancestral sufre 3 de daño: 66 -> 63
+  - T6 Dragón ancestral ataca a Lyra con AtaqueHechizo: 26 de daño (30 -> 4)
+  - T7 Lyra se defiende: recibirá la mitad del daño hasta su próximo turno
+  - T7 Amuleto regenera 2 HP (4 -> 6)
+  - T7 [Veneno] Dragón ancestral sufre 3 de daño: 63 -> 60
+  - T7 Dragón ancestral ataca a Lyra con AtaqueHechizo: 13 de daño (6 -> 0) [RESISTENCIA: la defensa absorbió 13]
+  - Ganador: Dragón ancestral (HP restante: 60)
+    Estadísticas finales: turnos=7, daño del héroe=90, daño del enemigo=169, críticos=0, pociones usadas=2
+
+
